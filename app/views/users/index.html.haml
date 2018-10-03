@@ -1,10 +1,13 @@
 .header
   .account
+    .account__title
+      アカウント
     .account__name
       = current_user.name
     .account__cog
       = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
 .contents
+  異性一覧
   -@users.each do |user|
     .users-name
       = user.name
