@@ -1,0 +1,11 @@
+.header
+  .account
+    .account__name
+      = current_user.name
+    .account__cog
+      = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
+.contents
+  -@users.each do |user|
+    .users-name
+      = user.name
+
