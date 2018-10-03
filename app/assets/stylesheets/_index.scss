@@ -1,0 +1,25 @@
+.wrapper{
+  height: 100%;
+  width: 100%;
+  .header{
+    height: 100px;
+    width: 100%;
+    background-color: green;
+    .account{
+
+      &__name{
+        float: left;
+      }
+      &__cog{
+        float: right;
+      }
+    }
+  }
+  .contents{
+
+  }
+
+
+
+
+}
