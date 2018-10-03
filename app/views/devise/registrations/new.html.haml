@@ -6,12 +6,12 @@
     %br/
     = f.email_field :email, autofocus: true, autocomplete: "email"
   .field
-    = f.label :nickname
+    = f.label :name
     %em (6 characters maximum)
     %br/
-    = f.text_field :nickname, autofocus: true, maxlength: "6"
+    = f.text_field :name, autofocus: true, maxlength: "6"
   .field
-    = f.select :Sex, [['男', 0], ['女', 1]]
+    = f.select :sex, [['男', 0], ['女', 1]]
     %br/
   .field
     = f.label :password
