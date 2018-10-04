@@ -6,9 +6,12 @@
       = current_user.name
     .account__cog
       = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
+      = link_to user_path(current_user) do
+        マイページ
 .contents
   異性一覧
   -@users.each do |user|
     .users-name
       = user.name
+
 
