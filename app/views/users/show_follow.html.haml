@@ -1,0 +1,13 @@
+- provide(:title, @title)
+.row
+  %aside.col-md-4
+    %section.user_info
+      %h1= @user.name
+    %section.stats
+      = render 'stats'
+  .col-md-8
+    %h3= @title
+    - if @users.any?
+      -@users.each do |user|
+        %ul.users.follow
+          =user.name
