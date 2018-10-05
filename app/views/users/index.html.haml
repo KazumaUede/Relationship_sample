@@ -11,7 +11,8 @@
 .contents
   異性一覧
   -@users.each do |user|
-    .users-name
+    .users__name
       = user.name
-
-
+      .users__name__link
+      = link_to user_path(user) do
+        詳細

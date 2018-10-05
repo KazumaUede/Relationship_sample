@@ -4,11 +4,13 @@
   .header{
     height: 100px;
     width: 100%;
-    background-color: green;
+    background-color: #ddd;
     .account{
+      color: red;
 
       &__name{
         float: left;
+        color: black;
       }
       &__cog{
         float: right;
@@ -16,10 +18,21 @@
     }
   }
   .contents{
+    height: 600px;
+    width: 200px;
+      color: red;
+    background-color: #eee;
+    padding:0 20px;
+    float: left;
+    .users{
+      &__name{
+        padding-left:10px;
+        color: black;
+        &__link{
+          float:right;
+        }
+      }
 
+    }
   }
-
-
-
-
 }
