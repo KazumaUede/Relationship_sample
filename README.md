@@ -1,24 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+概要
+スクールの最終課題でフォロー機能の実装が必要になったため、このアプリを動作確認用として作成。
+ホーム画面で異性のユーザーがされ、詳細ボタンからフォローあるいはアンフォローが押せるページに移動する。
