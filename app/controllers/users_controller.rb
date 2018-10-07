@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   end
   def show
     @user = User.find(params[:id])
+    @users = current_user.matchers
   end
 
     def following

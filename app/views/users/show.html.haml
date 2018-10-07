@@ -1,6 +1,15 @@
-= @user.name
+.user
+  .user__name
+    = @user.name
+    のマイページ
 #follow_form
 = render 'stats'
+-if current_user.id == @user.id
+  .matchers
+    相互フォロー一覧
+    -@users.each do |user|
+      .matchers__name
+        =user.name
 -if current_user.id != @user.id
   - if current_user.following?(@user)
     = render 'unfollow'

@@ -35,4 +35,22 @@
 
     }
   }
+  .row{
+    height: 600px;
+    width: 200px;
+      color: red;
+    background-color: #eee;
+    padding:0 20px;
+    .col-md-8{
+      .user-name{
+        clear: both;
+        float:left;
+      }
+      .btn{
+        float:right;
+      }
+
+    }
+
+  }
 }
