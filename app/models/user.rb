@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :messages
+  has_many :group_users
+  has_many :groups, through: :group_users
 
   has_many :active_relationships, class_name:  "Relationship",
                                   foreign_key: "follower_id",
@@ -32,6 +34,10 @@ class User < ApplicationRecord
     following.include?(other_user)
   end
 
+  # def matching?
+  #   followers.include?(other_user)
+  # end
+
 
   has_many :microposts, dependent: :destroy
   has_many :active_relationships,  class_name:  "Relationship",
@@ -43,6 +49,7 @@ class User < ApplicationRecord
   has_many :following, through: :active_relationships,  source: :followed
   has_many :followers, through: :passive_relationships, source: :follower
 
+  # 相互フォローを判定する
   def matchers
     User.where(id: passive_relationships.select(:follower_id))
      .where(id: active_relationships.select(:followed_id))

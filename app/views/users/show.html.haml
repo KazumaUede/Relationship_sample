@@ -7,12 +7,17 @@
 -if current_user.id == @user.id
   .matchers
     相互フォロー一覧
-    -@users.each do |user|
-      .matchers__name
-        =user.name
+    - current_user.groups.each do |group|
+      -group.users.each do|user|
+        -if user.id != current_user.id
+          .matchers__name
+            =user.name
+          = link_to group_messages_path(group) do
+            メッセージを送る
 -if current_user.id != @user.id
   - if current_user.following?(@user)
-    = render 'unfollow'
+    フォロー済み
   - else
     = render 'follow'
+
 
