@@ -3,6 +3,9 @@ class RelationshipsController < ApplicationController
   def create
     user = User.find(params[:followed_id])
     current_user.follow(user)
+    if current_user.matchers.present?
+      Group.create({user_ids: [user.id, current_user.id]})
+    end
     redirect_to user
   end
 
